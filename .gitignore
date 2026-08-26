@@ -13,5 +13,9 @@ target/
 .classpath
 .project
 
+# Course handouts - keep instructor material out of a public repo
+*.docx
+*.pdf
+
 # macOS
 .DS_Store
