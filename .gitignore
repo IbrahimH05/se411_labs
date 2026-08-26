@@ -1,0 +1,17 @@
+# Compiled Java
+*.class
+out/
+bin/
+build/
+target/
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# macOS
+.DS_Store
