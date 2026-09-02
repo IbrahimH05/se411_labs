@@ -11,7 +11,7 @@ labs run on a bare JDK; later ones are Maven projects.
 | [lab01](lab01/) | Introduction to git — config, clone, staging, commits, remotes | walkthrough + command reference |
 | [lab02](lab02/) | Java Generics — generic classes, bounded type parameters, a type-changing pipeline, wildcards | [lab02/src/lab02](lab02/src/lab02) |
 | [lab03](lab03/) | JUnit intro — unit testing a generic `Stack` with JUnit 5 under Maven | [lab03/src](lab03/src) |
-| [lab04](lab04/) | Maven intro — JavaFX dependency and plugin, plus the Maven Site plugin | [lab04](lab04/) |
+| [lab04](lab04/) | Maven intro — JavaFX dependency and plugin, plus the Maven Site plugin, for the FinTech main project | [lab04](lab04/) |
 
 ## How the repo is organized
 
@@ -39,7 +39,7 @@ se411_labs/
 └── lab04/
     ├── README.md
     ├── pom.xml        <- Maven + JavaFX + Site plugin
-    └── src/main/java/psu/se411/mainproject/
+    └── src/main/java/psu/se411/fintech/
 ```
 
 ## Running a lab

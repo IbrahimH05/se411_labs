@@ -9,15 +9,11 @@ plugin.
 | File | What it is |
 | --- | --- |
 | [`pom.xml`](pom.xml) | The whole lab, really — dependency, plugins, and project metadata |
-| [`src/main/java/psu/se411/mainproject/MainClass.java`](src/main/java/psu/se411/mainproject/MainClass.java) | A minimal JavaFX `Application` |
+| [`src/main/java/psu/se411/fintech/MainClass.java`](src/main/java/psu/se411/fintech/MainClass.java) | A minimal JavaFX `Application` |
 
-Coordinates: `psu.se411:mainproject`, package `psu.se411.mainproject` — the
-namespace pattern the handout asks for.
-
-> **Project name is a placeholder.** The handout says to name the project after the
-> course main project, which isn't settled yet, so `mainproject` stands in.
-> Renaming means changing `<artifactId>`, `<mainClass>`, the `package` line, and the
-> folder — see the rename command at the bottom.
+Coordinates: `psu.se411:fintech`, package `psu.se411.fintech` — the namespace
+pattern the handout asks for. The project is named **FinTech**, after the course
+main project.
 
 ## Running it
 
@@ -63,7 +59,7 @@ Windows and Linux without edits.
   <artifactId>javafx-maven-plugin</artifactId>
   <version>0.0.8</version>
   <configuration>
-    <mainClass>psu.se411.mainproject.MainClass</mainClass>
+    <mainClass>psu.se411.fintech.MainClass</mainClass>
   </configuration>
 </plugin>
 ```
@@ -166,11 +162,11 @@ Spot-checked in the generated HTML rather than assumed:
 
 | Expected | Where | Result |
 | --- | --- | --- |
-| `SE411 Main Project` | `index.html` | found |
+| `FinTech` | `index.html` | found |
 | `section 1383` | `index.html` | found |
 | `SE411-Tech-Company` | `index.html` | found |
 | `Apache License 2.0` | `licenses.html` | found |
-| `Ibrahim Alhalaki` | `team.html` | found, in the Members table with organization and role |
+| `Ibrahim Alhalaki` and his email | `team.html` | found, in the Members table with organization and role |
 
 `target/` is gitignored, so the site is not committed — it is regenerated with
 `mvn clean site`.
@@ -179,10 +175,11 @@ Spot-checked in the generated HTML rather than assumed:
 
 ## Renaming the project later
 
-Once the course main project has a name, from this directory:
+If the project name changes, the identifier appears in four places — `<artifactId>`,
+`<mainClass>`, the `package` line, and the folder name. From this directory:
 
 ```bash
-NEW=yourprojectname && mkdir -p src/main/java/psu/se411/$NEW && git mv src/main/java/psu/se411/mainproject/MainClass.java src/main/java/psu/se411/$NEW/ && rmdir src/main/java/psu/se411/mainproject && sed -i '' "s/mainproject/$NEW/g" pom.xml src/main/java/psu/se411/$NEW/MainClass.java && mvn clean compile
+NEW=newname && mkdir -p src/main/java/psu/se411/$NEW && git mv src/main/java/psu/se411/fintech/MainClass.java src/main/java/psu/se411/$NEW/ && rmdir src/main/java/psu/se411/fintech && sed -i '' "s/fintech/$NEW/g" pom.xml src/main/java/psu/se411/$NEW/MainClass.java && mvn clean compile
 ```
 
 Then update `<name>` and `<description>` by hand, since those are prose rather than

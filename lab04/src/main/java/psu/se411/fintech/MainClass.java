@@ -1,4 +1,4 @@
-package psu.se411.mainproject;
+package psu.se411.fintech;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -16,13 +16,13 @@ public class MainClass extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Label title = new Label("SE411 — Software Construction");
-            Label subtitle = new Label("Maven + JavaFX project skeleton");
+            Label title = new Label("FinTech");
+            Label subtitle = new Label("SE411 Software Construction — Maven + JavaFX");
 
             VBox root = new VBox(10, title, subtitle);
             root.setAlignment(Pos.CENTER);
 
-            primaryStage.setTitle("My Project");
+            primaryStage.setTitle("FinTech");
             primaryStage.setScene(new Scene(root, 420, 180));
             primaryStage.show();
         } catch (Exception e) {
