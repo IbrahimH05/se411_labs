@@ -2,12 +2,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>psu.se411</groupId>
-  <artifactId>mainproject</artifactId>
+  <artifactId>fintech</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
   <!-- Exercise 2: project information -->
-  <name>SE411 Main Project</name>
-  <description>Course main project for SE411 Software Construction (section 1383).
+  <name>FinTech</name>
+  <description>FinTech — course main project for SE411 Software Construction (section 1383).
     Maven project wired up with JavaFX and the Maven Site plugin.</description>
   <url>https://github.com/IbrahimH05/se411_labs</url>
 
@@ -26,7 +26,7 @@
   <developers>
     <developer>
       <name>Ibrahim Alhalaki</name>
-      <email>comethazineprankcaller2@gmail.com</email>
+      <email>ibrahimalhalakicollege@gmail.com</email>
       <organization>SE411-Tech-Company</organization>
       <roles>
         <role>developer</role>
@@ -57,7 +57,7 @@
         <artifactId>javafx-maven-plugin</artifactId>
         <version>0.0.8</version>
         <configuration>
-          <mainClass>psu.se411.mainproject.MainClass</mainClass>
+          <mainClass>psu.se411.fintech.MainClass</mainClass>
         </configuration>
       </plugin>
 
