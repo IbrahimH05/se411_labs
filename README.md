@@ -2,7 +2,7 @@
 
 Lab work for **SE411 — Fall 2026/2027**. Each lab is small and self-contained and
 drills one concept from the course — generics, unit testing, build tooling,
-exception handling. Early labs run on a bare JDK; later ones are Maven projects.
+exception handling, logging. Early labs run on a bare JDK; later ones are Maven projects.
 
 ## What's in here
 
@@ -13,6 +13,7 @@ exception handling. Early labs run on a bare JDK; later ones are Maven projects.
 | [lab03](lab03/) | JUnit intro — unit testing a generic `Stack` with JUnit 5 under Maven | [lab03/src](lab03/src) |
 | [lab04](lab04/) | Maven intro — JavaFX dependency and plugin, plus the Maven Site plugin, for the FinTech main project | [lab04](lab04/) |
 | [lab05](lab05/) | Exception handling — custom checked exceptions, and an online wallet that refuses to overdraw | [lab05/src](lab05/src) |
+| [lab06](lab06/) | Logging with SLF4J — the façade/binding split, swapping logback for log4j, levels and appenders | [lab06/src](lab06/src) |
 
 ## How the repo is organized
 
@@ -42,15 +43,21 @@ se411_labs/
 │   ├── README.md
 │   ├── pom.xml        <- Maven + JavaFX + Site plugin
 │   └── src/main/java/psu/se411/fintech/
-└── lab05/
+├── lab05/
+│   ├── README.md
+│   ├── pom.xml        <- Maven + exec plugin + JUnit 5
+│   └── src/{main,test}/java/edu/psu/se411/
+└── lab06/
     ├── README.md
-    ├── pom.xml        <- Maven + exec plugin + JUnit 5
-    └── src/{main,test}/java/edu/psu/se411/
+    ├── pom.xml        <- Maven + SLF4J + log4j binding
+    └── src/main/
+        ├── java/edu/spu/se411/lab06_logging/
+        └── resources/log4j.properties
 ```
 
 ## Running a lab
 
-Labs 01–02 need nothing but a JDK; labs 03–05 are Maven projects. From the lab's
+Labs 01–02 need nothing but a JDK; labs 03–06 are Maven projects. From the lab's
 own directory:
 
 | Lab | Command |
@@ -59,12 +66,13 @@ own directory:
 | lab03 | `mvn test` |
 | lab04 | `mvn clean javafx:run` and `mvn clean site` |
 | lab05 | `mvn clean package exec:java` and `mvn test` |
+| lab06 | `mvn clean package exec:java`, then `cat logs/App/log4j/log.out` |
 
 Each lab's README repeats the exact command and shows the real output.
 
 ## Requirements
 
-git and a JDK for the Java labs; labs 03–05 additionally need Maven. Everything
+git and a JDK for the Java labs; labs 03–06 additionally need Maven. Everything
 here was built and run against **OpenJDK 26.0.2.1** and **Maven 3.9.16**; each
 lab's README notes what it was tested with. Check yours with:
 
