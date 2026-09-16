@@ -5,6 +5,9 @@ bin/
 build/
 target/
 
+# Generated log output
+logs/
+
 # IDEs
 .idea/
 *.iml
