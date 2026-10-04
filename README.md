@@ -2,7 +2,7 @@
 
 Lab work for **SE411 — Fall 2026/2027**. Each lab is small and self-contained and
 drills one concept from the course — generics, unit testing, build tooling,
-exception handling, logging, polymorphism. Early labs run on a bare JDK; later ones are Maven projects.
+exception handling, logging, polymorphism, design patterns. Early labs run on a bare JDK; later ones are Maven projects.
 
 ## What's in here
 
@@ -15,6 +15,7 @@ exception handling, logging, polymorphism. Early labs run on a bare JDK; later o
 | [lab05](lab05/) | Exception handling — custom checked exceptions, and an online wallet that refuses to overdraw | [lab05/src](lab05/src) |
 | [lab06](lab06/) | Logging with SLF4J — the façade/binding split, swapping logback for log4j, levels and appenders | [lab06/src](lab06/src) |
 | [lab07](lab07/) | Polymorphism — a travel booking system with an abstract base class, three price formulas and one pricing method | [lab07/src](lab07/src) |
+| [lab08](lab08/) | Observer pattern — sensors as subjects, a dashboard and logger as observers, and cloning that does not share subscribers | [lab08/src](lab08/src) |
 
 ## How the repo is organized
 
@@ -54,18 +55,25 @@ se411_labs/
 │   └── src/main/
 │       ├── java/edu/spu/se411/lab06_logging/
 │       └── resources/log4j.properties
-└── lab07/
+├── lab07/
+│   ├── README.md
+│   ├── pom.xml        <- Maven + SLF4J + log4j + JUnit 5
+│   └── src/
+│       ├── main/java/edu/spu/se411/lab07_polymorphism/
+│       ├── main/resources/log4j.properties
+│       └── test/java/edu/spu/se411/lab07_polymorphism/
+└── lab08/
     ├── README.md
     ├── pom.xml        <- Maven + SLF4J + log4j + JUnit 5
     └── src/
-        ├── main/java/edu/spu/se411/lab07_polymorphism/
+        ├── main/java/edu/spu/se411/lab08/
         ├── main/resources/log4j.properties
-        └── test/java/edu/spu/se411/lab07_polymorphism/
+        └── test/java/edu/spu/se411/lab08/
 ```
 
 ## Running a lab
 
-Labs 01–02 need nothing but a JDK; labs 03–07 are Maven projects. From the lab's
+Labs 01–02 need nothing but a JDK; labs 03–08 are Maven projects. From the lab's
 own directory:
 
 | Lab | Command |
@@ -76,12 +84,13 @@ own directory:
 | lab05 | `mvn clean package exec:java` and `mvn test` |
 | lab06 | `mvn clean package exec:java`, then `cat logs/App/log4j/log.out` |
 | lab07 | `mvn clean package exec:java`, then `cat logs/App/log4j/log.out` |
+| lab08 | `mvn clean package exec:java` (add `-Dreading.interval.ms=0` to skip the sleeps) |
 
 Each lab's README repeats the exact command and shows the real output.
 
 ## Requirements
 
-git and a JDK for the Java labs; labs 03–07 additionally need Maven. Everything
+git and a JDK for the Java labs; labs 03–08 additionally need Maven. Everything
 here was built and run against **OpenJDK 26.0.2.1** and **Maven 3.9.16**; each
 lab's README notes what it was tested with. Check yours with:
 
