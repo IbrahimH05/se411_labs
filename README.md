@@ -16,6 +16,7 @@ exception handling, logging, polymorphism, design patterns. Early labs run on a 
 | [lab06](lab06/) | Logging with SLF4J — the façade/binding split, swapping logback for log4j, levels and appenders | [lab06/src](lab06/src) |
 | [lab07](lab07/) | Polymorphism — a travel booking system with an abstract base class, three price formulas and one pricing method | [lab07/src](lab07/src) |
 | [lab08](lab08/) | Observer pattern — sensors as subjects, a dashboard and logger as observers, and cloning that does not share subscribers | [lab08/src](lab08/src) |
+| [lab09](lab09/) | Strategy pattern — a generic `Inventory<T>` with pluggable search behaviour and wildcard display | [lab09/src](lab09/src) |
 
 ## How the repo is organized
 
@@ -62,18 +63,25 @@ se411_labs/
 │       ├── main/java/edu/spu/se411/lab07_polymorphism/
 │       ├── main/resources/log4j.properties
 │       └── test/java/edu/spu/se411/lab07_polymorphism/
-└── lab08/
+├── lab08/
+│   ├── README.md
+│   ├── pom.xml        <- Maven + SLF4J + log4j + JUnit 5
+│   └── src/
+│       ├── main/java/edu/spu/se411/lab08/
+│       ├── main/resources/log4j.properties
+│       └── test/java/edu/spu/se411/lab08/
+└── lab09/
     ├── README.md
     ├── pom.xml        <- Maven + SLF4J + log4j + JUnit 5
     └── src/
-        ├── main/java/edu/spu/se411/lab08/
+        ├── main/java/edu/psu/se411/lab09_inventory/
         ├── main/resources/log4j.properties
-        └── test/java/edu/spu/se411/lab08/
+        └── test/java/edu/psu/se411/lab09_inventory/
 ```
 
 ## Running a lab
 
-Labs 01–02 need nothing but a JDK; labs 03–08 are Maven projects. From the lab's
+Labs 01–02 need nothing but a JDK; labs 03–09 are Maven projects. From the lab's
 own directory:
 
 | Lab | Command |
@@ -85,12 +93,13 @@ own directory:
 | lab06 | `mvn clean package exec:java`, then `cat logs/App/log4j/log.out` |
 | lab07 | `mvn clean package exec:java`, then `cat logs/App/log4j/log.out` |
 | lab08 | `mvn clean package exec:java` (add `-Dreading.interval.ms=0` to skip the sleeps) |
+| lab09 | `mvn clean package exec:java`, then `cat logs/log.out` |
 
 Each lab's README repeats the exact command and shows the real output.
 
 ## Requirements
 
-git and a JDK for the Java labs; labs 03–08 additionally need Maven. Everything
+git and a JDK for the Java labs; labs 03–09 additionally need Maven. Everything
 here was built and run against **OpenJDK 26.0.2.1** and **Maven 3.9.16**; each
 lab's README notes what it was tested with. Check yours with:
 
