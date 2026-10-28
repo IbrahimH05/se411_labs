@@ -19,6 +19,7 @@ exception handling, logging, polymorphism, design patterns. Early labs run on a 
 | [lab09](lab09/) | Strategy pattern — a generic `Inventory<T>` with pluggable search behaviour and wildcard display | [lab09/src](lab09/src) |
 | [lab11](lab11/) | Introduction to threads — the double spending problem and the `synchronized` fix | [lab11/src](lab11/src) |
 | [lab12](lab12/) | Threads and locks — fixed vs cached pools, deadlock, and resource ordering | [lab12/src](lab12/src) |
+| [lab13](lab13/) | Spring introduction — a read-only REST API over H2 with Spring Data JDBC and validation | [lab13/src](lab13/src) |
 
 ## How the repo is organized
 
@@ -98,6 +99,7 @@ own directory:
 | lab09 | `mvn clean package exec:java`, then `cat logs/log.out` |
 | lab11 | `mvn clean package exec:java` |
 | lab12 | `mvn clean package exec:java`; other mains via `-Dexec.mainClass=` |
+| lab13 | `mvn clean spring-boot:run`, then `curl localhost:8080/api/v1/products` |
 
 Each lab's README repeats the exact command and shows the real output.
 
