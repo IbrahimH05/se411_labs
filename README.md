@@ -17,6 +17,7 @@ exception handling, logging, polymorphism, design patterns. Early labs run on a 
 | [lab07](lab07/) | Polymorphism — a travel booking system with an abstract base class, three price formulas and one pricing method | [lab07/src](lab07/src) |
 | [lab08](lab08/) | Observer pattern — sensors as subjects, a dashboard and logger as observers, and cloning that does not share subscribers | [lab08/src](lab08/src) |
 | [lab09](lab09/) | Strategy pattern — a generic `Inventory<T>` with pluggable search behaviour and wildcard display | [lab09/src](lab09/src) |
+| [lab11](lab11/) | Introduction to threads — the double spending problem and the `synchronized` fix | [lab11/src](lab11/src) |
 
 ## How the repo is organized
 
@@ -94,6 +95,7 @@ own directory:
 | lab07 | `mvn clean package exec:java`, then `cat logs/App/log4j/log.out` |
 | lab08 | `mvn clean package exec:java` (add `-Dreading.interval.ms=0` to skip the sleeps) |
 | lab09 | `mvn clean package exec:java`, then `cat logs/log.out` |
+| lab11 | `mvn clean package exec:java` |
 
 Each lab's README repeats the exact command and shows the real output.
 

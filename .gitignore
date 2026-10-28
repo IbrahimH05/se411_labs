@@ -23,5 +23,11 @@ logs/
 *.zip
 *.exe
 
+# The project repo is a separate checkout; a clone made here must not be committed
+SE411_Project/
+
+# Stray downloads that land in this folder
+*.csv
+
 # macOS
 .DS_Store
