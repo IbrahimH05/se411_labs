@@ -20,6 +20,7 @@ exception handling, logging, polymorphism, design patterns. Early labs run on a 
 | [lab11](lab11/) | Introduction to threads — the double spending problem and the `synchronized` fix | [lab11/src](lab11/src) |
 | [lab12](lab12/) | Threads and locks — fixed vs cached pools, deadlock, and resource ordering | [lab12/src](lab12/src) |
 | [lab13](lab13/) | Spring introduction — a read-only REST API over H2 with Spring Data JDBC and validation | [lab13/src](lab13/src) |
+| [lab14](lab14/) | Spring CRUD — the full create/read/update/delete API with status codes and validation | [lab14/src](lab14/src) |
 
 ## How the repo is organized
 
@@ -100,6 +101,7 @@ own directory:
 | lab11 | `mvn clean package exec:java` |
 | lab12 | `mvn clean package exec:java`; other mains via `-Dexec.mainClass=` |
 | lab13 | `mvn clean spring-boot:run`, then `curl localhost:8080/api/v1/products` |
+| lab14 | `mvn clean spring-boot:run`, then `curl localhost:8080/api/v1/courses` |
 
 Each lab's README repeats the exact command and shows the real output.
 
